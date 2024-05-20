@@ -1,7 +1,16 @@
-<div *ngIf="user$ | async as user">
-  <h2>{{ user.name }}</h2>
-  <img [src]="user.avatar" [alt]="user.name" />
-  <p>Email: {{ user.email }}</p>
-  <p>Biography: {{ user.biography }}</p>
-  <p>ID: {{ user.id }}</p>
-</div>
+<!-- Cards with media area -->
+@if(user$ | async; as user) {
+<mat-card>
+  <mat-card-header>
+    <mat-card-title-group>
+      <mat-card-title>{{ user.name }}</mat-card-title>
+      <mat-card-subtitle>{{ user.email }}</mat-card-subtitle>
+      <img mat-card-sm-image [src]="user.avatar" [alt]="user.name" />
+    </mat-card-title-group>
+  </mat-card-header>
+  <mat-card-content>
+    <p>Biography: {{ user.biography }}</p>
+    <p>ID: {{ user.id }}</p>
+  </mat-card-content>
+</mat-card>
+}

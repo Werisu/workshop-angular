@@ -1,1 +1,26 @@
-<router-outlet></router-outlet>
+<mat-toolbar class="example-toolbar" color="primary">
+  <button
+    mat-icon-button
+    class="example-icon favorite-icon"
+    aria-label="Example icon-button with heart icon"
+    routerLink="/"
+    routerLinkActive="router-link-active"
+  >
+    <mat-icon>home</mat-icon>
+  </button>
+  <span>Workshop Angular PRO</span>
+  <span class="example-spacer"></span>
+  <button
+    mat-icon-button
+    class="example-icon favorite-icon"
+    aria-label="Example icon-button with heart icon"
+    routerLink="users"
+    routerLinkActive="router-link-active"
+  >
+    <mat-icon>person</mat-icon>
+  </button>
+</mat-toolbar>
+
+<main>
+  <router-outlet></router-outlet>
+</main>
